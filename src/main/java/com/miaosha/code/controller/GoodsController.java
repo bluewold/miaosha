@@ -53,7 +53,7 @@ public class GoodsController {
 	 * QPS:2884, load:5 
 	 * */
     @RequestMapping(value="/to_list", produces="text/html")
-	@ApiOperation(value="获取商品列表")
+	@ApiOperation(value="获取商品列表",httpMethod = "GET")
     @ResponseBody
     public String list(HttpServletRequest request, HttpServletResponse response, Model model,MiaoshaUser user) {
     	model.addAttribute("user", user);
